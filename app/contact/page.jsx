@@ -79,8 +79,7 @@ const Contact = () => {
             >
               <h3 className="text-3xl text-[#f79500]">Let's Work Together</h3>
               <p className="text-white/60">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
-                ex quibusdam temporibus officiis aliquid quidem
+                Hi I'm Ansh Agrawal, Fill out below form for contacting me.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input

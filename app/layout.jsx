@@ -23,9 +23,13 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/assets/photo.png" />
       </head>
       <body className={jetbrainsMono.className}>
-        <Header />
+        <div className="fixed px-10 w-full">
+          <Header />
+        </div>
         {/* <StairTransition /> */}
-        <PageTransition>{children}</PageTransition>
+        <div className="pt-[100px]">
+          <PageTransition>{children}</PageTransition>
+        </div>
       </body>
     </html>
   );

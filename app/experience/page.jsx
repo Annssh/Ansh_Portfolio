@@ -8,9 +8,47 @@ const experiences = [
   {
     num: "01",
     company: "Tata Motors Ltd.",
+    position: "Summer Intern",
     address: "Pantnagar, Uttarakhand, India",
-    description:
-      "Created an Application for Tata Motors Ltd, Pantnagar, Uttarakhand.  This application is named as MES System Health Tracking (MSHT) • MES is an information system that help in effective execution of manufacturing operations. This creates reports on plant activities in real time data from order release, to manufacturing, to delivery, to the finished goods inventory. • MSHT application is based on JavaScript which keeps track on physically deployed systems in plant premise. • This displays insights of CPU like temperature, RAM usage, CPU load, CPU usage, cache memory, last login time and date, last rebooted time which helps Tata Motors a lot to maintains the information about their system. • This may reduce the maintenance time for system, cost savings, workers safety, operational efficiency, quality control and many more benefits for production industry. ",
+    description: (
+      <div style={{ padding: "20px" }}>
+        <h2>MES System Health Tracking (MSHT)</h2>
+        <p>Application for Tata Motors Ltd, Pantnagar, Uttarakhand</p>
+        <ul style={{ listStyleType: "disc", marginLeft: "20px" }}>
+          <li>
+            MES is an information system that helps in effective execution of
+            manufacturing operations. It creates reports on plant activities in
+            real-time data from order release, to manufacturing, to delivery, to
+            the finished goods inventory.
+          </li>
+          <li>
+            MSHT application is based on JavaScript which keeps track of
+            physically deployed systems in the plant premise.
+          </li>
+          <li>
+            This displays insights of CPU like:
+            <ul style={{ listStyleType: "circle", marginLeft: "20px" }}>
+              <li>Temperature</li>
+              <li>RAM usage</li>
+              <li>CPU load</li>
+              <li>CPU usage</li>
+              <li>Cache memory</li>
+              <li>Last login time and date</li>
+              <li>Last rebooted time</li>
+            </ul>
+          </li>
+          <li>
+            Helps Tata Motors a lot to maintain the information about their
+            systems.
+          </li>
+          <li>
+            This may reduce the maintenance time for systems, cost savings,
+            workers' safety, operational efficiency, quality control, and many
+            more benefits for the production industry.
+          </li>
+        </ul>
+      </div>
+    ),
     imgUrl: "/assets/experience/tatamotors.jpeg/",
   },
 ];
@@ -42,7 +80,7 @@ const Experience = () => {
                 key={index}
                 className="flex flex-col justify-center gap-6 group "
               >
-                <div className="w-full flex flex-col gap-10 justify-between items-center md:flex-row">
+                <div className="w-full flex flex-col gap-10 md:gap-[100px] justify-left items-center md:flex-row md:m-10">
                   <div className="text-3xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500 md:text-5xl">
                     {experience.num}
                   </div>
@@ -55,7 +93,10 @@ const Experience = () => {
                     />
                     {experience.company}
                   </h2>
-                  <p>May 2024 - July 2024</p>
+                </div>
+                <div className="flex justify-between items-center mx-10">
+                  <div className="text-[15px] font-bold md:text-[20px]">{experience.position}</div>
+                  <p className="text-[15px] font-bold md:text-[20px]">May 2024 - July 2024</p>
                 </div>
                 <p className="text-white/60">{experience.description}</p>
 
