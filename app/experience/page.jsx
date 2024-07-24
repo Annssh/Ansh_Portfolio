@@ -10,18 +10,13 @@ const experiences = [
     company: "Tata Motors Ltd.",
     position: "Summer Intern",
     address: "Pantnagar, Uttarakhand, India",
+    title: (
+      <h2 style={{ padding: "20px" }}>
+        MES System Health Tracking (MSHT) using
+      </h2>
+    ),
     description: (
       <div style={{ padding: "20px" }}>
-        <h2>
-          MES System Health Tracking (MSHT) using{" "}
-          <span
-            style={{ transition: "color 0.3s ease" }}
-            onMouseEnter={(e) => (e.target.style.color = "#f79500")}
-            onMouseLeave={(e) => (e.target.style.color = "inherit")}
-          >
-            MERN Stack Development
-          </span>
-        </h2>
         <p>Application for Tata Motors Ltd, Pantnagar, Uttarakhand</p>
         <ul style={{ listStyleType: "disc", marginLeft: "20px" }}>
           <li>
@@ -59,6 +54,11 @@ const experiences = [
       </div>
     ),
     imgUrl: "/assets/experience/tatamotors.jpeg/",
+    tech: (
+      <h2 style={{ padding: "18px", marginLeft: "-10px" }}>
+        MERN Stack Development
+      </h2>
+    ),
   },
 ];
 
@@ -87,7 +87,7 @@ const Experience = () => {
             return (
               <div
                 key={index}
-                className="flex flex-col justify-center gap-6 group "
+                className="flex flex-col justify-center gap-6 group"
               >
                 <div className="w-full flex flex-col gap-10 md:gap-[100px] justify-left items-center md:flex-row md:m-10">
                   <div className="text-3xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500 md:text-5xl">
@@ -104,10 +104,22 @@ const Experience = () => {
                   </h2>
                 </div>
                 <div className="flex justify-between items-center mx-10">
-                  <div className="text-[15px] font-bold md:text-[20px]">{experience.position}</div>
-                  <p className="text-[15px] font-bold md:text-[20px]">May 2024 - July 2024</p>
+                  <div className="text-[15px] font-bold md:text-[20px]">
+                    {experience.position}
+                  </div>
+                  <p className="text-[15px] font-bold md:text-[20px]">
+                    May 2024 - July 2024
+                  </p>
                 </div>
-                <p className="text-white/60">{experience.description}</p>
+                <p className="text-white/60">
+                  <div className="flex flex-col md:flex-row">
+                    <span>{experience.title}</span>
+                    <span className="group-hover:text-[#f79500] text-[18px] group-hover:font-extrabold transition-all duration-500 ml-[12px] md:ml-0">
+                      {experience.tech}
+                    </span>
+                  </div>{" "}
+                  {experience.description}
+                </p>
 
                 <div className="border-b border-white/20 w-full"></div>
                 <Button
