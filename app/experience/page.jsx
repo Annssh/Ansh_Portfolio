@@ -12,7 +12,16 @@ const experiences = [
     address: "Pantnagar, Uttarakhand, India",
     description: (
       <div style={{ padding: "20px" }}>
-        <h2>MES System Health Tracking (MSHT) using MERN Stack Development</h2>
+        <h2>
+          MES System Health Tracking (MSHT) using{" "}
+          <span
+            style={{ transition: "color 0.3s ease" }}
+            onMouseEnter={(e) => (e.target.style.color = "#f79500")}
+            onMouseLeave={(e) => (e.target.style.color = "inherit")}
+          >
+            MERN Stack Development
+          </span>
+        </h2>
         <p>Application for Tata Motors Ltd, Pantnagar, Uttarakhand</p>
         <ul style={{ listStyleType: "disc", marginLeft: "20px" }}>
           <li>
