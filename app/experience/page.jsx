@@ -12,7 +12,7 @@ const experiences = [
     address: "Pantnagar, Uttarakhand, India",
     description: (
       <div style={{ padding: "20px" }}>
-        <h2>MES System Health Tracking (MSHT)</h2>
+        <h2>MES System Health Tracking (MSHT) using MERN Stack Development</h2>
         <p>Application for Tata Motors Ltd, Pantnagar, Uttarakhand</p>
         <ul style={{ listStyleType: "disc", marginLeft: "20px" }}>
           <li>
