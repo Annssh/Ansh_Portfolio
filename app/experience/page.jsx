@@ -67,7 +67,7 @@ const Experience = () => {
     const link = document.createElement("a");
 
     link.href = "/tatamotorscertificate.pdf";
-    link.download = "AnshAgrawalCertificate.pdf";
+    link.download = "tatamotorscertificate.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
